@@ -34,14 +34,12 @@ export default function LandingPage() {
       <main className="px-4 py-16 sm:py-24">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">
-            Dinner, shared
+            Great home-cooked dinners,
             <br />
-            <span className="text-amber-600">with neighbors</span>
+            <span className="text-amber-600">shared with neighbors you trust.</span>
           </h1>
           <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-            Village Kitchen helps neighbors share the cooking load. Take turns
-            making meals for each other — no money, no delivery, just one less
-            dinner to worry about.
+            A private community where households take turns cooking and enjoying meals together.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
