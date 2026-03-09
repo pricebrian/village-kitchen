@@ -1,0 +1,22 @@
+{
+  "name": "Village Kitchen",
+  "short_name": "Village Kitchen",
+  "description": "A private meal-sharing network for families",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#fffbeb",
+  "theme_color": "#d97706",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
