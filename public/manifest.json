@@ -1,7 +1,7 @@
 {
   "name": "Village Kitchen",
   "short_name": "Village Kitchen",
-  "description": "A private meal-sharing network for families",
+  "description": "Dinner, shared with neighbors.",
   "start_url": "/dashboard",
   "display": "standalone",
   "background_color": "#fffbeb",

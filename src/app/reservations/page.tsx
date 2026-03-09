@@ -25,7 +25,7 @@ export default async function ReservationsPage() {
         <EmptyState
           icon={<CalendarCheck className="w-10 h-10" />}
           title="No reservations yet"
-          description="Reserve portions from meals posted by your village"
+          description="Reserve portions from meals your neighbors are cooking"
           action={
             <Link href="/dashboard" className="text-sm text-amber-700 font-medium hover:text-amber-800">
               Browse meals

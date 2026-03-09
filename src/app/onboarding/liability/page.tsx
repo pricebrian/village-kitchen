@@ -58,7 +58,7 @@ export default function LiabilityPage() {
                   <p className="mt-1 text-sm text-gray-600">
                     I understand that meals shared through Village Kitchen may be prepared in home
                     kitchens that have not been inspected by local health authorities. I agree to
-                    follow safe food handling practices when cooking for my village.
+                    follow safe food handling practices when cooking for my community.
                   </p>
                 </div>
               </label>

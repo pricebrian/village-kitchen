@@ -27,7 +27,7 @@ export default function SignupPage() {
             <UtensilsCrossed className="w-7 h-7 text-white" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Create your account</h1>
-          <p className="mt-1 text-sm text-gray-600">Join Village Kitchen</p>
+          <p className="mt-1 text-sm text-gray-600">Get started with Village Kitchen</p>
         </div>
 
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">

@@ -29,7 +29,7 @@ export default function NewMealPage() {
     <AppShell>
       <PageHeader
         title="Post a meal"
-        subtitle="Share what you're cooking with your village"
+        subtitle="Share what you're cooking with your neighbors"
         backHref="/dashboard"
       />
 

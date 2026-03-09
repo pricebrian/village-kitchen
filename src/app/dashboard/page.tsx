@@ -4,7 +4,6 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { requireFamily, requireVillage, getUpcomingMeals, getCreditBalance, getVillageMembers, getUnreadNotificationCount } from '@/lib/queries'
 import { formatDate, formatTime, getRelativeTime } from '@/lib/utils'
-import { PORTION_UNIT_DESCRIPTION } from '@/types/database'
 import { UtensilsCrossed, Plus, Users, Coins, Bell, ClipboardList, UserPen, Copy } from 'lucide-react'
 
 export default async function DashboardPage() {
@@ -23,7 +22,7 @@ export default async function DashboardPage() {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold text-gray-900">{village.name}</h1>
-            <p className="text-sm text-gray-500">{village.zip_code} &middot; {members.length}/{village.max_families} families</p>
+            <p className="text-sm text-gray-500">{village.zip_code} &middot; {members.length}/{village.max_families} households</p>
           </div>
           {unreadCount > 0 && (
             <div className="relative">
@@ -40,9 +39,9 @@ export default async function DashboardPage() {
       <Card className="mb-6 bg-gradient-to-r from-amber-500 to-orange-500 border-0 text-white">
         <CardContent className="flex items-center justify-between py-5">
           <div>
-            <p className="text-amber-100 text-sm font-medium">Your credits</p>
+            <p className="text-amber-100 text-sm font-medium">Portions available</p>
             <p className="text-3xl font-bold">{balance}</p>
-            <p className="text-amber-200 text-xs mt-0.5">{PORTION_UNIT_DESCRIPTION}</p>
+            <p className="text-amber-200 text-xs mt-0.5">1 credit = 1 portion of a neighbor&apos;s meal</p>
           </div>
           <Coins className="w-10 h-10 text-amber-200/50" />
         </CardContent>
@@ -84,7 +83,7 @@ export default async function DashboardPage() {
           <div className="w-9 h-9 bg-blue-100 rounded-lg flex items-center justify-center">
             <Users className="w-5 h-5 text-blue-700" />
           </div>
-          <span className="text-sm font-medium text-gray-900">Village info</span>
+          <span className="text-sm font-medium text-gray-900">Community</span>
         </Link>
       </div>
 
@@ -101,7 +100,7 @@ export default async function DashboardPage() {
           <CardContent className="text-center py-10">
             <UtensilsCrossed className="w-10 h-10 text-gray-300 mx-auto mb-3" />
             <p className="text-sm font-medium text-gray-900">No upcoming meals</p>
-            <p className="text-xs text-gray-500 mt-1">Be the first to share a meal with your village!</p>
+            <p className="text-xs text-gray-500 mt-1">Be the first to share a meal with your neighbors!</p>
             <Link
               href="/meals/new"
               className="inline-flex items-center mt-4 px-4 py-2 bg-amber-600 text-white text-sm font-medium rounded-lg hover:bg-amber-700 transition-colors"

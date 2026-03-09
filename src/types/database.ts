@@ -150,4 +150,4 @@ export const FEEDBACK_TAGS = [
 ] as const
 
 export const STARTER_CREDITS = 3
-export const PORTION_UNIT_DESCRIPTION = '1 portion = 1 adult serving or 2 kid servings'
+export const PORTION_UNIT_DESCRIPTION = '1 credit = 1 portion'

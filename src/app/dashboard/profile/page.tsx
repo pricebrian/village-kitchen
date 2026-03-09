@@ -60,7 +60,7 @@ export default function EditProfilePage() {
 
         <form action={handleSubmit} className="space-y-5">
           <div>
-            <label htmlFor="family_name" className="block text-sm font-medium text-gray-700 mb-1">Family name</label>
+            <label htmlFor="family_name" className="block text-sm font-medium text-gray-700 mb-1">Household name</label>
             <input
               id="family_name"
               name="family_name"

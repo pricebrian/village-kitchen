@@ -27,7 +27,7 @@ export function CancelMealButton({ mealId, hasReservations }: { mealId: string; 
     <div className="bg-red-50 rounded-xl border border-red-200 p-4">
       <p className="text-sm text-red-700 mb-3">
         {hasReservations
-          ? 'This will cancel all reservations and refund credits to those families. Are you sure?'
+          ? 'This will cancel all reservations and refund credits to those who reserved. Are you sure?'
           : 'Are you sure you want to cancel this meal?'}
       </p>
       <div className="flex gap-3">

@@ -11,7 +11,7 @@ export default async function ChatPage() {
   return (
     <AppShell>
       <PageHeader
-        title="Village chat"
+        title="Community chat"
         subtitle={membership.village.name}
       />
       <ChatFeed
