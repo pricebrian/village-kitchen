@@ -21,7 +21,7 @@ export default async function FeedbackPage() {
     <AppShell>
       <PageHeader
         title="My feedback"
-        subtitle="Private feedback from families who received your meals"
+        subtitle="Private feedback from neighbors who received your meals"
         backHref="/dashboard"
       />
 
@@ -29,7 +29,7 @@ export default async function FeedbackPage() {
         <EmptyState
           icon={<MessageSquareHeart className="w-10 h-10" />}
           title="No feedback yet"
-          description="When families confirm receiving your meals, their feedback will appear here."
+          description="When neighbors confirm receiving your meals, their feedback will appear here."
         />
       ) : (
         <div className="space-y-3">

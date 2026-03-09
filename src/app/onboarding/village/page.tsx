@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { createVillage, joinVillage } from '@/lib/actions/village'
 import { Users, Plus, ArrowRight } from 'lucide-react'
 
-export default function VillageOnboardingPage() {
+export default function CommunityOnboardingPage() {
   const [mode, setMode] = useState<'choose' | 'create' | 'join'>('choose')
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
@@ -36,8 +36,8 @@ export default function VillageOnboardingPage() {
           <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4">
             <Users className="w-7 h-7 text-amber-700" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-900">Join your village</h1>
-          <p className="mt-1 text-sm text-gray-600">Create a new village or join with an invite code</p>
+          <h1 className="text-2xl font-bold text-gray-900">Join your community</h1>
+          <p className="mt-1 text-sm text-gray-600">Start a new community or join one with an invite code</p>
         </div>
 
         {error && (
@@ -53,7 +53,7 @@ export default function VillageOnboardingPage() {
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="font-semibold text-gray-900">I have an invite code</h3>
-                  <p className="mt-1 text-sm text-gray-600">Join an existing village from a friend or neighbor</p>
+                  <p className="mt-1 text-sm text-gray-600">Join an existing community from a neighbor</p>
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-amber-600 transition-colors" />
               </div>
@@ -65,8 +65,8 @@ export default function VillageOnboardingPage() {
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="font-semibold text-gray-900">Create a new village</h3>
-                  <p className="mt-1 text-sm text-gray-600">Start a village and invite families to join</p>
+                  <h3 className="font-semibold text-gray-900">Start a new community</h3>
+                  <p className="mt-1 text-sm text-gray-600">Create a community and invite neighbors to join</p>
                 </div>
                 <Plus className="w-5 h-5 text-gray-400 group-hover:text-amber-600 transition-colors" />
               </div>
@@ -99,7 +99,7 @@ export default function VillageOnboardingPage() {
                 disabled={loading}
                 className="w-full bg-amber-600 text-white py-2.5 rounded-lg font-medium hover:bg-amber-700 disabled:opacity-50 transition-colors"
               >
-                {loading ? 'Joining...' : 'Join village'}
+                {loading ? 'Joining...' : 'Join community'}
               </button>
             </form>
           </div>
@@ -110,18 +110,18 @@ export default function VillageOnboardingPage() {
             <button onClick={() => { setMode('choose'); setError(null) }} className="text-sm text-gray-500 hover:text-gray-700 mb-4">
               &larr; Back
             </button>
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">Create your village</h2>
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">Start your community</h2>
             <form action={handleCreate} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Village name
+                  Community name
                 </label>
                 <input
                   id="name"
                   name="name"
                   required
                   className="block w-full rounded-lg border border-gray-300 px-3 py-2.5 text-gray-900 focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
-                  placeholder="e.g. Maple Street Families"
+                  placeholder="e.g. Maple Street Neighbors"
                 />
               </div>
               <div>
@@ -146,12 +146,12 @@ export default function VillageOnboardingPage() {
                   name="description"
                   rows={2}
                   className="block w-full rounded-lg border border-gray-300 px-3 py-2.5 text-gray-900 focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
-                  placeholder="A little about your village..."
+                  placeholder="A little about your neighborhood..."
                 />
               </div>
               <div>
                 <label htmlFor="max_families" className="block text-sm font-medium text-gray-700 mb-1">
-                  Max families
+                  Max households
                 </label>
                 <input
                   id="max_families"
@@ -168,7 +168,7 @@ export default function VillageOnboardingPage() {
                 disabled={loading}
                 className="w-full bg-amber-600 text-white py-2.5 rounded-lg font-medium hover:bg-amber-700 disabled:opacity-50 transition-colors"
               >
-                {loading ? 'Creating...' : 'Create village'}
+                {loading ? 'Creating...' : 'Create community'}
               </button>
             </form>
           </div>

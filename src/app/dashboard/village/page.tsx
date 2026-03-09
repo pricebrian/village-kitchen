@@ -3,9 +3,9 @@ import { PageHeader } from '@/components/layout/page-header'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { requireFamily, requireVillage, getVillageMembers } from '@/lib/queries'
-import { Users, Copy } from 'lucide-react'
+import { Users } from 'lucide-react'
 
-export default async function VillageInfoPage() {
+export default async function CommunityInfoPage() {
   const family = await requireFamily()
   const membership = await requireVillage(family.id)
   const village = membership.village
@@ -15,7 +15,7 @@ export default async function VillageInfoPage() {
     <AppShell>
       <PageHeader
         title={village.name}
-        subtitle="Village information"
+        subtitle="Community information"
         backHref="/dashboard"
       />
 
@@ -28,12 +28,12 @@ export default async function VillageInfoPage() {
               <code className="text-2xl font-mono font-bold text-amber-700 tracking-wider">
                 {village.invite_code}
               </code>
-              <p className="text-xs text-gray-500">Share this code with families you want to invite</p>
+              <p className="text-xs text-gray-500">Share this code with neighbors you want to invite</p>
             </div>
           </CardContent>
         </Card>
 
-        {/* Village details */}
+        {/* Community details */}
         <Card>
           <CardContent className="space-y-3">
             <div>
@@ -48,7 +48,7 @@ export default async function VillageInfoPage() {
             )}
             <div>
               <p className="text-xs text-gray-500">Capacity</p>
-              <p className="text-sm font-medium text-gray-900">{members.length} / {village.max_families} families</p>
+              <p className="text-sm font-medium text-gray-900">{members.length} / {village.max_families} households</p>
             </div>
           </CardContent>
         </Card>
@@ -58,7 +58,7 @@ export default async function VillageInfoPage() {
           <CardHeader>
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-gray-500" />
-              <h2 className="font-semibold text-gray-900">Members</h2>
+              <h2 className="font-semibold text-gray-900">Households</h2>
             </div>
           </CardHeader>
           <div className="divide-y divide-gray-100">

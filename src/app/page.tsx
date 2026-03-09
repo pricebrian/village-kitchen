@@ -34,13 +34,14 @@ export default function LandingPage() {
       <main className="px-4 py-16 sm:py-24">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">
-            Share home-cooked meals
+            Dinner, shared
             <br />
-            <span className="text-amber-600">with your village</span>
+            <span className="text-amber-600">with neighbors</span>
           </h1>
           <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-            A private meal-sharing network for families. Cook together, eat together,
-            build community — no money, no delivery, just neighbors helping neighbors.
+            Village Kitchen helps neighbors share the cooking load. Take turns
+            making meals for each other — no money, no delivery, just one less
+            dinner to worry about.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -64,18 +65,18 @@ export default function LandingPage() {
             <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4">
               <Users className="w-6 h-6 text-amber-700" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-900">Private villages</h3>
+            <h3 className="text-lg font-semibold text-gray-900">Private community</h3>
             <p className="mt-2 text-sm text-gray-600">
-              Create or join a small, invite-only group of families in your neighborhood.
+              Create or join a small, invite-only group of households in your neighborhood.
             </p>
           </div>
           <div className="text-center px-4">
             <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-4">
               <Heart className="w-6 h-6 text-orange-700" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-900">Share with love</h3>
+            <h3 className="text-lg font-semibold text-gray-900">Share the load</h3>
             <p className="mt-2 text-sm text-gray-600">
-              Post meals, reserve portions, and exchange credits. No money changes hands.
+              Post meals when you cook extra. Reserve a portion when a neighbor cooks. No money changes hands.
             </p>
           </div>
           <div className="text-center px-4">
@@ -84,7 +85,7 @@ export default function LandingPage() {
             </div>
             <h3 className="text-lg font-semibold text-gray-900">Built on trust</h3>
             <p className="mt-2 text-sm text-gray-600">
-              Private feedback, allergy awareness, and community coordination built in.
+              Private feedback, allergy awareness, and simple coordination built in.
             </p>
           </div>
         </div>
@@ -94,10 +95,10 @@ export default function LandingPage() {
           <h2 className="text-2xl font-bold text-center text-gray-900 mb-10">How it works</h2>
           <div className="space-y-6">
             {[
-              { step: '1', title: 'Create your family profile', desc: 'Tell us about your family, dietary needs, and preferences.' },
-              { step: '2', title: 'Join or create a village', desc: 'Connect with trusted families in your neighborhood via invite code.' },
-              { step: '3', title: 'Cook and share', desc: 'Post meals when you cook extra. Reserve portions when others cook.' },
-              { step: '4', title: 'Pick up and enjoy', desc: 'Grab your reserved meal during the pickup window. Confirm receipt and leave feedback.' },
+              { step: '1', title: 'Set up your household', desc: 'Tell us about your household, dietary needs, and preferences.' },
+              { step: '2', title: 'Join or start a community', desc: 'Connect with trusted neighbors via invite code.' },
+              { step: '3', title: 'Cook and share', desc: 'Post meals when you cook extra. Reserve portions when neighbors cook.' },
+              { step: '4', title: 'Pick up and enjoy', desc: 'Grab your reserved meal during the pickup window. Confirm receipt and share feedback.' },
             ].map((item) => (
               <div key={item.step} className="flex gap-4 items-start">
                 <div className="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-sm">
@@ -116,7 +117,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="px-4 py-8 border-t border-amber-200/50">
         <div className="max-w-4xl mx-auto text-center text-sm text-gray-500">
-          Village Kitchen — A private meal-sharing network for families
+          Village Kitchen — Dinner, shared with neighbors.
         </div>
       </footer>
     </div>

@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Village Kitchen',
-  description: 'A private meal-sharing network for families',
+  description: 'Dinner, shared with neighbors.',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

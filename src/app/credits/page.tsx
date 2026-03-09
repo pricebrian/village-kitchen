@@ -3,7 +3,6 @@ import { PageHeader } from '@/components/layout/page-header'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { requireFamily, getCreditBalance, getCreditLedger } from '@/lib/queries'
-import { PORTION_UNIT_DESCRIPTION } from '@/types/database'
 import { Coins } from 'lucide-react'
 
 const eventLabels: Record<string, { label: string; variant: 'success' | 'danger' | 'warning' | 'info' }> = {
@@ -28,9 +27,9 @@ export default async function CreditsPage() {
       <Card className="mb-6 bg-gradient-to-r from-amber-500 to-orange-500 border-0 text-white">
         <CardContent className="py-6 text-center">
           <Coins className="w-8 h-8 mx-auto text-amber-200/70 mb-2" />
-          <p className="text-amber-100 text-sm font-medium">Current balance</p>
+          <p className="text-amber-100 text-sm font-medium">Portions available</p>
           <p className="text-4xl font-bold mt-1">{balance}</p>
-          <p className="text-amber-200 text-xs mt-2">{PORTION_UNIT_DESCRIPTION}</p>
+          <p className="text-amber-200 text-xs mt-2">1 credit = 1 portion of a neighbor&apos;s meal</p>
         </CardContent>
       </Card>
 
@@ -41,11 +40,11 @@ export default async function CreditsPage() {
           <ul className="text-sm text-gray-600 space-y-1.5">
             <li className="flex items-start gap-2">
               <span className="text-green-600 font-bold">+</span>
-              <span>Earn credits when families confirm receiving your meal</span>
+              <span>Earn credits when neighbors confirm receiving your meal</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-red-600 font-bold">-</span>
-              <span>Spend credits to reserve portions from other families</span>
+              <span>Spend credits to reserve portions from neighbors</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-blue-600 font-bold">↺</span>
