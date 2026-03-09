@@ -39,7 +39,10 @@ export default function LandingPage() {
             <span className="text-amber-600">shared with neighbors you trust.</span>
           </h1>
           <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-            A private community where households take turns cooking and enjoying meals together.
+            Cook one night. Enjoy meals from your community the rest of the week.
+          </p>
+          <p className="mt-3 text-sm text-gray-500 max-w-xl mx-auto">
+            Village Kitchen helps households coordinate dinner with their neighborhood.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
